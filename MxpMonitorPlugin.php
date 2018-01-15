@@ -19,8 +19,13 @@ class MxpMonitorPlugin extends BasePlugin
 
 	public function getDeveloperUrl()
 	{
-		return 'http://mediaxplain.dev';
+		return 'http://mediaxplain.nl';
 	}
+
+    public function getPluginUrl()
+    {
+        return 'https://github.com/boersmagijs/mxpmonitor';
+    }
 
 	public function registerSiteRoutes()
 	{
