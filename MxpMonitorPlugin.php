@@ -22,9 +22,9 @@ class MxpMonitorPlugin extends BasePlugin
 		return 'http://mediaxplain.nl';
 	}
 
-    public function getPluginUrl()
+    public function getReleaseFeedUrl()
     {
-        return 'https://github.com/boersmagijs/mxpmonitor';
+        return 'https://raw.githubusercontent.com/boersmagijs/mxpmonitor/master/releases.json';
     }
 
 	public function registerSiteRoutes()
