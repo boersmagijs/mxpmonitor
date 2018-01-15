@@ -1,0 +1,27 @@
+{% import '_includes/forms' as forms %}
+
+{% set docsUrl = 'http://buildwithcraft.com/docs/sections-and-entries#sections' %}
+
+{{ forms.textField({
+label: "Key"|t,
+id: 'key',
+name: 'key',
+instructions: "The key that will verify calls to the plugin. This must be set for calls to work."|t,
+value: settings.key,
+autofocus: true,
+errors: settings.getErrors('key')
+}) }}
+
+{% set key = settings.key ? settings.key : '1234567890' %}
+
+<h2>Examples</h2>
+
+<p>Simply create a GET request to the action URL.</p>
+
+<h3>URL</h3>
+
+<code>{{  siteUrl('/mxp/monitor', { key: key }) }}</code>
+
+<h3>Update URL</h3>
+
+<code>{{  siteUrl('/mxp/monitor/updates', { key: key }) }}</code>
